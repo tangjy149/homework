@@ -1,0 +1,262 @@
+#sparking{
+    margin: 0px;
+    padding: 0px;
+}
+.navbar_top{
+    position: relative;
+    height: 64px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    transition: padding 0.3s;
+}
+.logo{
+    width: 275px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: 400;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+.navBtn{
+    position: relative;
+    float: right;
+}
+.button_outline{
+    color: #373a3c;
+    background-color: transparent;
+    background-image: none;
+    border-color: #373a3c;
+}
+button_outline_click{
+    color: #373a3c;
+    background-color: transparent;
+    background-image: none;
+    border-color: #373a3c;
+}
+.dropdown_menu,.dropdown_message{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 0.875rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.125rem;
+}
+.dropdown_item{
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.inner{
+    position: relative;
+    padding-left: 195px;
+}
+.innerFlex{
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 -20px; 
+}
+.sliderBackground{
+    position: fixed;
+    width: 180px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #05326cf5;
+}
+.sliderBar{
+    position: absolute;
+    width: 180px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0 0 60px;
+    background-color: #0e3a72;
+}
+.columnUl{
+    padding: 0px;
+    margin-top: 0px;
+    font-size: 16px;
+}
+.columnUl_item{
+    width: 100%;
+    float: none;
+}
+.item_link{
+    display: block;
+    color: white;
+    padding: 20px 35px;
+    background-color: #051B32;
+    border-right: 4px solid #36C3FF;
+}
+.insideContainer{
+    display: flex;
+    flex-basis: 0;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    flex-grow: 1;
+}
+.insideCard{
+    width: 100%;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.insideCard .insideCard_top{
+    min-height: 50px;
+    box-shadow: 0 0px 8px rgba(7, 17, 27, 0.2);
+    background-color: #fff;
+    margin-top: 0px;
+}
+.insideCard .insideCard_top .topTitle{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    border-bottom: 1px solid #E9E9E9;
+    color: #333;
+    border-radius: 2px 2px 0 0;
+    font-size: 16px;
+}
+.insideCard .insideCard_top #newList li{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0px; 
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    padding: 13px 15px 15px 75px;
+    border-bottom: 1px solid #e2e2e2;
+
+}
+
+.insideCard .insideCard_top #newList li > div{
+    flex: none;
+}
+.liRight{
+    display: flex;
+    flex-direction: column;
+}
+.authorPic{
+    width: 45px;
+    height: 45px;
+    margin-left: -45px;
+}
+.authorPic img{
+    width: 45px;
+    height: 45px;
+}
+.practiseTop{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 500px;
+    height: 20px;
+    margin-left: 25px;
+    border-bottom: 2px dotted #e2e2e2;
+}
+.practiseTop span{
+    margin-left: 20px;
+    line-height: 15px;
+    font-size: 17px;
+}
+.titleLogo{
+    width: 30px;
+    height: 15px;
+    border: solid 1px #36C3FF;
+    font-size: 10px;
+    color: #36C3FF;
+    line-height: 15px;
+    text-align: center;
+}
+.practiseBottom{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 500px;
+    height: 25px;
+    margin-left: 25px;
+    line-height: 30px;
+}
+.author{
+    height: 25px;
+    color:#a59c9c;
+    font-size: 17px;
+}
+.practiseDate{
+    margin-left: 200px;
+    height: 25px;
+    color:#a59c9c;
+    font-size: 17px;
+}
+/* 下半部分 */
+.insideCard_bottom{
+    min-height: 50px;
+    box-shadow: 0 0px 8px rgba(7, 17, 27, 0.2);
+    background-color: #fff;
+    margin-top: 0px;
+}
+.insideCard .insideCard_bottom .topTitle{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    border-bottom: 1px solid #E9E9E9;
+    color: #333;
+    border-radius: 2px 2px 0 0;
+    font-size: 17px;
+}
+.insideCard .insideCard_bottom #allList li{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0px; 
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    padding: 13px 15px 15px 75px;
+    border-bottom: 1px solid #e2e2e2;
+
+}
+.insideCard .insideCard_bottom #allList li > div{
+    flex: none;
+}
+.choices{
+    width: 150px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.choiceList{
+    display: flex;
+
+}
+.choiceList li{
+    flex: 1;
+    text-align: center;
+    line-height: 27px;
+    border-right: 1px solid #e2e2e2;
+}
+.choiceList li a{
+    font-size: 16px;
+    color: #8e8c8c;
+}
+.choiceList li a:hover{
+    font-size: 16px;
+    color: #05326cf5;
+}
