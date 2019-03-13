@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="//at.alicdn.com/t/font_1074479_h2i9kui4qu7.css" rel="stylesheet" type="text/css">
+    <link href="../assets/umeditor/themes/default/css/umeditor.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/jQueryTime-141124170801/css/lyz.calendar.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="sparking">
+        <div class="navbar_top navbar">
+            <div class="container">
+                <a class="">
+                    <div class="logo">BluemSun</div>
+                </a>
+                <div class="navBtn">
+                    <button class="btn button_outline" type="button" id="buttonMessage">
+                        <span class="iconfont icon-mail_fill"></span>
+                        <span>信息</span>
+                    </button>
+                    <div class="dropdown_message">
+                        <button type="button" class="dropdown_item">
+                            <span class="iconfont icon-remind_fill"></span>
+                            <span>新信息，请及时查看</span>
+                        </button>
+                    </div>
+                    <button class="btn button_outline user" type="button" id="buttonUser">
+                        <span class="iconfont icon-people_fill"></span>
+                        <span>唐家阳</span>
+                    </button>
+                    <div class="dropdown_menu">
+                        <a>
+                            <button type="button" class="dropdown_item">
+                                <span class="iconfont icon-homepage_fill"></span>
+                                <span>个人中心</span>
+                            </button>
+                        </a>
+                        <button type="button" class="dropdown_item">
+                            <span class="iconfont icon-enterinto_fill"></span>
+                            <span>登出</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="inner container">
+            <div class="innerFlex_build">
+                <div class="sliderBackground"></div>
+                <div class="sliderBar">
+                    <ul class="columnUl nav">
+                        <li class="columnUl_item">
+                            <a class="item_link">
+                                <span class="iconfont icon-activity"></span>
+                                <span>练习集</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="insideContainer">
+                    <div class="insideCard">
+                        <div class="insideCard_top_build">
+                            <div class="topAll">
+                                <input type="text" id="build_title" placeholder="请输入标题" />
+                            </div>
+                            <div id="setNovel">
+                                <div id="novel"></div>
+                            </div>
+                            <div id="buttonMap">
+                                <div id="timeChoose">
+                                    <span class="tip">设置时效：</span>
+                                    <input id="txtBeginDate" />
+                                    <span class="tip">to</span>
+                                    <input id="txtEndDate" />
+                                </div>
+                                <div class="form-group">
+                                    <span class="tip">练习类型：</span>
+                                    <div class="txt-box">
+                                        <select id="selType">
+                                            <option>请选择</option>
+                                            <option>前端</option>
+                                            <option>后端</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="btnBox">
+                                    <div class="txt-box">
+                                        <input id="btnPulish" type="button" class="btn_buttom btnPush" value="发布练习">
+                                        <input id="btnSave" type="button" class="btn_buttom btnPush" value="保存为草稿">
+                                        <input id="btnCancel" type="button" class="btn_buttom btnBack" value="返回">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../assets/umeditor/third-party/jquery.min.js"></script>
+        <script src="../assets/umeditor/umeditor.config.js"></script>
+        <script src="../assets/umeditor/umeditor.min.js"></script>
+        <script src="../assets/jQueryTime-141124170801/js/lyz.calendar.min.js"></script>
+        <script>
+            $(function () {
+                //获取当前时间
+                Date.prototype.Format = function timeGet(fmt) {
+                    var o = {
+                        "M+": this.getMonth() + 1, //月份 
+                        "d+": this.getDate(), //日 
+                        "H+": this.getHours(), //小时 
+                        "m+": this.getMinutes(), //分 
+                        "s+": this.getSeconds(), //秒 
+                        "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+                        "S": this.getMilliseconds() //毫秒 
+                    };
+                    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+                    for (var k in o)
+                        if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+                    return fmt;
+                }
+
+                let time1 = new Date().Format("yyyy-MM-dd");
+                let time2 = new Date().Format("HH:mm:ss");
+                console.log(time1);
+                console.log(time2);
+                //选择时效
+                $("#txtBeginDate").click(function () {
+                    $("#txtBeginDate").val(time1);
+                });
+                $("#txtEndDate").calendar({
+                    controlId: "divDate_end",                                 // 弹出的日期控件ID，默认: $(this).attr("id") + "Calendar"
+                    speed: 200,                                           // 三种预定速度之一的字符串("slow", "normal", or "fast")或表示动画时长的毫秒数值(如：1000),默认：200
+                    complement: true,                                     // 是否显示日期或年空白处的前后月的补充,默认：true
+                    readonly: true,                                       // 目标对象是否设为只读，默认：true
+                    upperLimit: NaN,                               // 日期上限，默认：NaN(不限制)
+                    lowerLimit: new Date(time1),                   // 日期下限，默认：NaN(不限制)
+                    callback: function () {                               // 点击选择日期后的回调函数
+                        alert("您选择的日期是：" + $("#txtEndDate").val());
+                    }
+                });
+            })
+        </script>
+
+
+
+
+</body>
+
+</html>

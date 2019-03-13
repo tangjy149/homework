@@ -1,4 +1,4 @@
-import {one} from './try.js';
+
 import '../css/common.css';
 import '../css/index.css';
 import './jquery.js';
@@ -29,4 +29,32 @@ import './jquery.js';
     },function(){
         $(this).css({'background-color':'transparent'})
     })
+}
+{
+    $(function(){
+        $.ajax({
+            url: "http://94.191.30.171:8080/Homework/teacheradmin/gethomeworklist?homeworkId=1",
+            type: 'GET',
+            dataType:'json',
+            data: {},
+            beforeSend: function () {
+
+            },
+            success:function(data){
+                // if(data['isSucceed']==1){
+                //     console.log(data['liuyan']);
+                //     for (var i = 0; i < 7; i++) {
+                //         $(".practiseTop a").eq(i).text(data['liuyan'][i].content);
+                //         $(".rDate").eq(i).text(data['liuyan'][i].name);
+                //     }
+                // }
+                console.log(data);
+            },
+             error : function() {
+                alert("异常！");
+            }
+        });
+    })
+        
+
 }

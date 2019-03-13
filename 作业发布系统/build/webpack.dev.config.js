@@ -8,6 +8,9 @@ module.exports = {
     entry: {
         
         index: path.resolve(__dirname, '../src/js/index.js'), //绝对路径
+        pushPractise:path.resolve(__dirname,'../src/js/push.js'),
+        build:path.resolve(__dirname,'../src/js/build.js'),
+        answerPractise:path.resolve(__dirname,'../src/js/answerPractise.js'),
     },
     output: {
         path: path.resolve(__dirname, '../dist/'),//输出根目录
@@ -68,6 +71,24 @@ module.exports = {
             filename: 'index.html',
             inject: true,
             chunks: ['index']
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../src/html/pushPractise.html'),
+            filename: 'html/pushPractise.html',
+            inject: true,
+            chunks: ['pushPractise']
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../src/html/build.html'),
+            filename: 'html/build.html',
+            inject: true,
+            chunks: ['build']
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../src/html/answerPractise.html'),
+            filename: 'html/answerPractise.html',
+            inject: true,
+            chunks: ['answerPractise']
         }),
        
     ]

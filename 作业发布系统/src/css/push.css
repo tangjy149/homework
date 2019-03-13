@@ -1,0 +1,93 @@
+.innerFlex_build{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 -20px; 
+}
+.insideCard .insideCard_top .topButton{
+    position: relative;
+    height: 65px;
+    line-height: 65px;
+    padding: 0 15px;
+    border-bottom: 1px solid #E9E9E9;
+    color: #333;
+    border-radius: 2px 2px 0 0;
+    font-size: 16px;
+}
+.topButton button{
+    width: 100px;
+    height: 35px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #0c4895;
+    outline: none;
+    border: none;
+    box-shadow: 0 0px 8px rgba(7, 17, 27, 0.2);
+}
+#ptaList li{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0px; 
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    padding: 0px 45px;
+
+}
+.choices_new{
+    width: 120px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.choiceList_new{
+    display: flex;
+
+}
+.choiceList_new li{
+    flex: 1;
+    text-align: center;
+    line-height: 15px;
+    border-right: 1px solid #e2e2e2;
+}
+.choiceList_new li a{
+    font-size: 13px;
+    color: #8e8c8c;
+    font-weight: bold;
+}
+.choiceList_new li a:hover{
+    font-size: 16px;
+    color: #05326cf5;
+}
+#ptaHead > div{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.ptaTitle{
+    width: 55%;
+}
+.ptaLogo,.ptaStatu,.patBtn{
+    width: 15%;
+}
+#ptaHead .ptaTitle{
+    text-align: left;
+}
+.ptaInner > div{
+    font-size: 16px;
+    text-align: center;
+}
+.ptaInner .ptaTitle{
+    text-align: left;
+    color: #1166d4;
+    font-size: 17px;
+}
+.ptaInner .patBtn button{
+    width: 50px;
+    height: 30px;
+    border: none;
+    font-size: 16px;
+    color: #1166d4;
+    background-color: transparent;
+
+}

@@ -1,0 +1,40 @@
+.topAll_answer{
+    display: block;
+    width: 92%;
+    margin:0px 45px;
+    margin-bottom: 15px;
+    background-color: transparent;
+}
+.topAll_title{
+    width: 35%;
+    height: 35px;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.topAll_request,.topAll_time{
+    width: 100%; 
+}
+.topAll_request span{
+    font-size: 19px;
+}
+#requestContainer{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 17px;
+    margin:10px auto;
+    text-indent: 20px;
+    color: #5b5b5b;
+    background-color: #efefef;
+}
+.topAll_time{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+.topAll_time span{
+    font-size: 18px;
+}
+.txt-box_answer{
+    margin-left: 35%;
+}
